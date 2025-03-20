@@ -109,8 +109,9 @@ const Complaints = () => {
                             {complaint.imageUrl && (
                                 <img
                                     className="complaint-image"
-                                    src={`https://village-backend-16uk.onrender.com/${complaint.imageUrl}`}
+                                    src={`https://village-backend-16uk.onrender.com${complaint.imageUrl}`}
                                     alt="Complaint"
+                                    crossOrigin="anonymous"
                                 />
                             )}
                             <div className="complaint-text">
