@@ -13,7 +13,7 @@ const Home = () => {
         if (image) formData.append("image", image);
 
         try {
-            const response = await axios.post("http://localhost:5000/complaints", formData, {
+            const response = await axios.post("https://village-backend-16uk.onrender.com/complaints", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             alert("complaint submitted succesfully !!");
