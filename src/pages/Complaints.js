@@ -35,50 +35,6 @@
 // export default Complaints;
 
 
-// import React, { useEffect, useState } from "react";
-// import "../pageCSS/Complaints.css"; // Importing external CSS file
-
-// const Complaints = () => {
-//     const [complaints, setComplaints] = useState([]);
-
-//     useEffect(() => {
-//         fetch("https://village-backend-16uk.onrender.com/complaints/pending")
-//             .then(res => res.json())
-//             .then(data => setComplaints(data))
-//             .catch(error => console.error("Error fetching complaints:", error));
-//     }, []);
-
-//     return (
-//         <div className="container">
-//             {/* <h2>Pending Complaints</h2> */}
-//             <div className="complaint-list">
-//                 {complaints.length === 0 ? (
-//                     <p>No pending complaints.</p>
-//                 ) : (
-//                     complaints.map(complaint => (
-//                         <div key={complaint._id} className="complaint-item">
-//                             {complaint.imageUrl && (
-//                                 <img
-//                                     className="complaint-image"
-//                                     src={`https://village-backend-16uk.onrender.com/${complaint.imageUrl}`}
-//                                     alt="Complaint"
-//                                 />
-//                             )}
-//                             <div className="complaint-text">
-//                                 <p><strong>Complaint:</strong> {complaint.text}</p>
-//                                 <p className="status">Status: {complaint.status}</p>
-//                             </div>
-//                         </div>
-//                     ))
-//                 )}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Complaints;
-
-
 import React, { useEffect, useState } from "react";
 import "../pageCSS/Complaints.css"; // Importing external CSS file
 
@@ -94,33 +50,26 @@ const Complaints = () => {
 
     return (
         <div className="container">
+            {/* <h2>Pending Complaints</h2> */}
             <div className="complaint-list">
                 {complaints.length === 0 ? (
                     <p>No pending complaints.</p>
                 ) : (
-                    complaints.map(complaint => {
-                        // Ensure the image URL is correctly formatted
-                        const imageUrl = complaint.imageUrl?.startsWith("http")
-                            ? complaint.imageUrl
-                            : `https://village-backend-16uk.onrender.com${complaint.imageUrl}`;
-
-                        return (
-                            <div key={complaint._id} className="complaint-item">
-                                {complaint.imageUrl && (
-                                    <img
-                                        className="complaint-image"
-                                        src={imageUrl}
-                                        alt="Complaint"
-                                        onError={(e) => (e.target.style.display = "none")} // Hide broken images
-                                    />
-                                )}
-                                <div className="complaint-text">
-                                    <p><strong>Complaint:</strong> {complaint.text}</p>
-                                    <p className="status">Status: {complaint.status}</p>
-                                </div>
+                    complaints.map(complaint => (
+                        <div key={complaint._id} className="complaint-item">
+                            {complaint.imageUrl && (
+                                <img
+                                    className="complaint-image"
+                                    src={`https://village-backend-16uk.onrender.com/${complaint.imageUrl}`}
+                                    alt="Complaint"
+                                />
+                            )}
+                            <div className="complaint-text">
+                                <p><strong>Complaint:</strong> {complaint.text}</p>
+                                <p className="status">Status: {complaint.status}</p>
                             </div>
-                        );
-                    })
+                        </div>
+                    ))
                 )}
             </div>
         </div>
@@ -128,3 +77,4 @@ const Complaints = () => {
 };
 
 export default Complaints;
+
