@@ -1,0 +1,74 @@
+/* Modern Box Layout for Pending Complaints */
+/* .container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://res.cloudinary.com/dnklrtoxl/image/upload/v1742410346/slide3_otpted.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.complaint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Spacing between complaint boxes */
+}
+
+.complaint-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.complaint-item:hover {
+    transform: scale(1.02);
+    background: #f1f1f1;
+}
+
+.complaint-image {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.complaint-text {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.complaint-text p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e63946;
+}

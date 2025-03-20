@@ -1,0 +1,92 @@
+/* General container */
+.admin-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-container input {
+    padding: 8px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Complaints Grid */
+.complaints-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual Complaint Box */
+.complaint-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.complaint-box:hover {
+    transform: scale(1.02);
+}
+
+/* Image */
+.complaint-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Text */
+.complaint-box p {
+    margin: 0;
+    font-size: 16px;
+    flex: 1;
+}
+
+/* Button */
+.complaint-box button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.complaint-box button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,66 @@
+/* Background Styling */
+.contact-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://res.cloudinary.com/dnklrtoxl/image/upload/v1742410346/slide3_otpted.jpg') no-repeat center center/cover;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Box - Glassmorphism Effect */
+.contact-box {
+    position: relative;
+    background: white;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.contact-box h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Description */
+.contact-box .description {
+    color:"white";
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Contact Details */
+.contact-details p {
+    color:"white";
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Links and Highlights */
+.contact-details a {
+    color: #f7c600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
