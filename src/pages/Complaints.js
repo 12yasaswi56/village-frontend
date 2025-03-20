@@ -34,6 +34,55 @@
 
 // export default Complaints;
 
+// import React, { useEffect, useState } from "react";
+// import "../pageCSS/Complaints.css";
+
+// const Complaints = () => {
+//     const [complaints, setComplaints] = useState([]);
+
+//     useEffect(() => {
+//         fetch("https://village-backend-16uk.onrender.com/complaints/pending")
+//             .then(res => res.json())
+//             .then(data => setComplaints(data))
+//             .catch(error => console.error("Error fetching complaints:", error));
+//     }, []);
+
+//     return (
+//         <div>
+//             <h2>Pending Complaints</h2>
+//             <ul>
+//                 {complaints.length === 0 ? (
+//                     <p>No pending complaints.</p>
+//                 ) : (
+//                     complaints.map(complaint => {
+//                         // Ensure the correct full image URL
+//                         const imageUrl = complaint.imageUrl.startsWith("/")
+//                             ? `https://village-backend-16uk.onrender.com${complaint.imageUrl}`
+//                             : complaint.imageUrl;
+
+//                         return (
+//                             <li key={complaint._id}>
+//                                 <p><strong>Complaint:</strong> {complaint.text}</p>
+//                                 {complaint.imageUrl && (
+//                                     <img
+//                                         src={imageUrl}
+//                                         alt="Complaint"
+//                                         width="100"
+//                                         onError={(e) => (e.target.style.display = "none")} // Hide broken images
+//                                     />
+//                                 )}
+//                                 <p><strong>Status:</strong> {complaint.status}</p>
+//                             </li>
+//                         );
+//                     })
+//                 )}
+//             </ul>
+//         </div>
+//     );
+// };
+
+// export default Complaints;
+
 
 import React, { useEffect, useState } from "react";
 import "../pageCSS/Complaints.css"; // Importing external CSS file
