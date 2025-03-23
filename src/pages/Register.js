@@ -91,7 +91,7 @@ const Register = () => {
     
       <div className="left">
       {/* <ImageSlider /> Add the image slider here */}
-        <h2>Welcome to <b>Village Management</b></h2>
+        <h2>Welcome to Village Management</h2>
         <p>Already have an account? <a href="/">Login here</a></p>
       </div>
 
